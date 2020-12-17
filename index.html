@@ -22,10 +22,16 @@
 	<body>
 		<script src="js/pitchdetect.js"></script>
 		
+<<<<<<< HEAD
 		<p><!--bug where 'use demo audio' must be hit first before 'use live input'-->
 			<button onclick="enableLiveAudioInput()">use live input v2</button>
 			<button onclick="this.innerText = togglePlayback()" id="demo">use demo audio</button>
 			<button onclick="toggleLiveInput()" id="liveAudio">use live input</button>
+=======
+		<p>
+			<button onclick="this.innerText = togglePlayback()">use demo audio</button>
+			<button onclick="toggleLiveInput()">use live input</button>
+>>>>>>> f7bfa048b441803abb82a1b8f039958e3279dd57
 			<button onclick="toggleOscillator()">use oscillator</button>
 			<!--<button onclick="updatePitch(0);">sample</button>-->
 		</p>
@@ -37,6 +43,7 @@
 			<div id="detune"><span id="detune_amt">--</span><span id="flat">cents &#9837;</span><span id="sharp">cents &#9839;</span></div>
 		</div>
 
+<<<<<<< HEAD
 		<!-- just used for debugging -->
 		<canvas id="waveform" width="512" height="256"></canvas>
 		
@@ -44,6 +51,13 @@
 		<a href="https://github.com/cwilso/pitchdetect" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
 		-->
 		<!-- commenting out google analytics 
+=======
+		<!-- just used for debugging
+		<canvas id="waveform" width="512" height="256"></canvas>
+		-->
+		<a href="https://github.com/cwilso/pitchdetect" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="img/forkme.png" alt="Fork me on GitHub"></a>
+
+>>>>>>> f7bfa048b441803abb82a1b8f039958e3279dd57
 		<script type="text/javascript">
 
 			var _gaq = _gaq || [];
@@ -56,6 +70,9 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 		</script>
+<<<<<<< HEAD
 		-->
+=======
+>>>>>>> f7bfa048b441803abb82a1b8f039958e3279dd57
 	</body>
 </html>
