@@ -390,11 +390,12 @@ function PitchJsModel(accidental, cents, midiNote, noteString, pitch) {
 		dataInputCache.set("pitchEvent", JSON.stringify(this));
 	}
 }
-
+var liveAudioInputEnabled = false; 
 function enableLiveAudioInput() {
 	var r = confirm("Press OK to enable live audio input!");
 	if (r == true) {
 		document.getElementById("demo").click();
 		document.getElementById("liveAudio").click();
+		liveAudioInputEnabled = true;
 	}
 }
