@@ -95,8 +95,10 @@ function error() {
 }
 
 var userMediaAccessError;
+let debugGetUserMedia = false;
 function getUserMedia(dictionary, callback) {
     try {
+		if(debugGetUserMedia == true) throw 'debugGetUserMediaException';
 		navigator.getUserMedia = 
         	navigator.getUserMedia ||
         	navigator.webkitGetUserMedia ||
@@ -393,7 +395,8 @@ function PitchJsModel(accidental, cents, midiNote, noteString, pitch) {
 	}
 }
 var liveAudioInputEnabled = false; 
-function enableLiveAudioInput() {
+function enableLiveAudioInput(userMediaAccessErrorMessage) {
+	userMediaAccessError = userMediaAccessErrorMessage;
 	var r = confirm("Press OK to enable live audio input!");
 	if (r == true) {
 		document.getElementById("demo").click();
